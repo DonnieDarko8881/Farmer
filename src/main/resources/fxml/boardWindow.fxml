@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="1261.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="579.0" prefWidth="1198.0">
+         <children>
+            <AnchorPane blendMode="EXCLUSION" layoutX="303.0" layoutY="34.0" prefHeight="258.0" prefWidth="526.0">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="43.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/rabbit.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="43.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/sheep.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="175.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/cow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="313.0" layoutY="62.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/horse.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="437.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/smallDog.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="437.0" layoutY="146.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/bigDog.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="175.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/pig.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="80.0" layoutY="85.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="351.0" layoutY="145.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="213.0" layoutY="85.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="480.0" layoutY="84.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="213.0" layoutY="208.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="208.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="485.0" layoutY="230.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="75.0" fitWidth="162.0" layoutX="43.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pictures/dices.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="303.0" layoutY="360.0" prefHeight="244.0" prefWidth="526.0">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="43.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/rabbit.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="43.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/sheep.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="175.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/cow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="313.0" layoutY="62.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/horse.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="437.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/smallDog.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="437.0" layoutY="146.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/bigDog.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="175.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/pig.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="478.0" layoutY="80.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="75.0" layoutY="80.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="79.0" layoutY="204.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="349.0" layoutY="141.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="211.0" layoutY="204.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="211.0" layoutY="81.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="483.0" layoutY="226.0" text="0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="212.0" fitWidth="339.0" layoutX="889.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pictures/exchange.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="973.0" layoutY="345.0" prefHeight="59.0" prefWidth="249.0" text="Table of Exchange" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="21.0" prefHeight="59.0" prefWidth="194.0" text="Computer Result" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="544.0" prefHeight="59.0" prefWidth="194.0" text="User Result" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="985.0" layoutY="34.0" prefHeight="59.0" prefWidth="147.0" text="Exchange..." textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <VBox layoutX="867.0" layoutY="93.0" prefHeight="235.0" prefWidth="173.0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="210.0" text="Rabbit to Sheep">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="204.0" text="Sheep to Pig">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="224.0" text="Pig to Cow">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="202.0" text="Cow to Horse">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="199.0" text="Sheep to small Dog">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Cow to big Dog">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="1059.0" layoutY="93.0" prefHeight="235.0" prefWidth="173.0">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="210.0" text="Rabbit to Sheep">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="204.0" text="Sheep to Pig">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="224.0" text="Pig to Cow">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="202.0" text="Cow to Horse">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="199.0" text="Sheep to small Dog">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Cow to big Dog">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
