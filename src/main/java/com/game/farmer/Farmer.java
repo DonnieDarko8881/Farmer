@@ -17,8 +17,8 @@ public class Farmer extends Application {
     public void start(Stage primaryStage) throws Exception {
 
 
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(this.getClass().getResource("/fxml/boardWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/boardWindow.fxml"));
+
 
         StackPane stackPane = loader.load();
         Scene scene = new Scene(stackPane);
