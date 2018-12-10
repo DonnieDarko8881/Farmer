@@ -26,8 +26,5 @@ public class RedDig extends Dig {
         return null;
     }
 
-    public int addRabbit(){
 
-        return 0;
-    }
 }

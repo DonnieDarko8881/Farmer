@@ -218,17 +218,17 @@
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="204.0" text="Sheep to Pig">
+                  <Button fx:id="sheepToPigButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeSheepToPig" prefHeight="39.0" prefWidth="204.0" text="Sheep to Pig">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="224.0" text="Pig to Cow">
+                  <Button fx:id="pigToCowButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangePigToCow" prefHeight="39.0" prefWidth="224.0" text="Pig to Cow">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="202.0" text="Cow to Horse">
+                  <Button fx:id="cowToHorseButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeCowToHorse" prefHeight="39.0" prefWidth="202.0" text="Cow to Horse">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -238,7 +238,7 @@
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Cow to big Dog">
+                  <Button fx:id="cowToBigDogButton" disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Cow to big Dog">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -252,27 +252,27 @@
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="204.0" text="Pig to Sheep">
+                  <Button fx:id="pigToSheepButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangePigToSheep" prefHeight="39.0" prefWidth="204.0" text="Pig to Sheep">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="224.0" text="Cow to Pig">
+                  <Button fx:id="cowToPigButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeCowToPig" prefHeight="39.0" prefWidth="224.0" text="Cow to Pig">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="202.0" text="Horse to Cow">
+                  <Button fx:id="horseToCowButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeHorseToCow" prefHeight="39.0" prefWidth="202.0" text="Horse to Cow">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="smallDogtoSheepButton" disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="199.0" text="Small Dog to Sheep">
+                  <Button fx:id="smallDogtoSheepButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeSmallDogToSheep" prefHeight="39.0" prefWidth="199.0" text="Small Dog to Sheep">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Big Dog to Cow">
+                  <Button fx:id="BigDogToCowButton" disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Big Dog to Cow">
                      <font>
                         <Font size="17.0" />
                      </font>

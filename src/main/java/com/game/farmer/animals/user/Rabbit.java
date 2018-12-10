@@ -12,23 +12,31 @@ import java.util.Deque;
 public class Rabbit {
 
 
-
-    public Deque<String> addToDequeOffRabbit(Deque<String> rabbitsOfUser, int randomNumberBlue, int randomNumberRed) {
+    public Deque<String> addToDequeOffRabbit(Deque<String> rabbitsOfUser, Deque<String> rabbitsOfFarm, int randomNumberBlue, int randomNumberRed) {
         if (randomNumberRed <= 6 && randomNumberBlue <= 6 && rabbitsOfUser.size() == 0) {
-            rabbitsOfUser.push("Rabbit");
+            if (rabbitsOfFarm.size() > 0) {
+                rabbitsOfFarm.pop();
+                rabbitsOfUser.push("Rabbit");
+            }
             return rabbitsOfUser;
         } else if (rabbitsOfUser.size() > 0 && randomNumberRed <= 6 && randomNumberBlue <= 6) {
 
             int currentNumberRabbit = rabbitsOfUser.size();
             for (int i = 0; i < Math.floor((currentNumberRabbit + 2) / 2); i++) {
-                rabbitsOfUser.push("Rabbit");
+                if (rabbitsOfFarm.size() > 0) {
+                    rabbitsOfFarm.pop();
+                    rabbitsOfUser.push("Rabbit");
+                }
             }
             return rabbitsOfUser;
         } else if (rabbitsOfUser.size() > 0 && (randomNumberRed <= 6 || randomNumberBlue <= 6)) {
 
             int currentNumberRabbit = rabbitsOfUser.size();
             for (int i = 0; i < Math.floor((currentNumberRabbit + 1) / 2); i++) {
-                rabbitsOfUser.push("Rabbit");
+                if (rabbitsOfFarm.size() > 0) {
+                    rabbitsOfFarm.pop();
+                    rabbitsOfUser.push("Rabbit");
+                }
             }
             return rabbitsOfUser;
         }
@@ -36,6 +44,15 @@ public class Rabbit {
 
         return rabbitsOfUser;
     }
+
+    public Deque<String> setNumberRabbitsOfFarm(Deque<String> rabbitsOfFarm) {
+
+        for (int i = 0; i < 60; i++) {
+            rabbitsOfFarm.push("Rabbit");
+        }
+        return rabbitsOfFarm;
+    }
+
 
 }
 
