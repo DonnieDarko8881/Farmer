@@ -1,4 +1,4 @@
-package com.game.farmer.animals.user;
+package com.game.farmer.animals;
 
 import java.util.Deque;
 

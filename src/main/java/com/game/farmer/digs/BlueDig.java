@@ -24,6 +24,8 @@ public class BlueDig extends Dig {
             Image wolf = new Image("/pictures/wolf.png");
             return wolf;
         }
+
+       // wyjątek illegalstateexpetion
         return null;
     }
 

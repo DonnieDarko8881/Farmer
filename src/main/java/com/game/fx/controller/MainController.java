@@ -1,7 +1,8 @@
 package com.game.fx.controller;
 
+import com.game.farmer.animals.*;
 import com.game.farmer.animals.enemy.Fox;
-import com.game.farmer.animals.user.*;
+import com.game.farmer.animals.enemy.Wolf;
 import com.game.farmer.digs.BlueDig;
 import com.game.farmer.digs.RedDig;
 import javafx.fxml.FXML;
@@ -45,6 +46,9 @@ public class MainController {
     @FXML
     private ImageView userSmallDog;
 
+    @FXML
+    private ImageView userBigDog;
+
 
     @FXML
     private Label countUserRabbit;
@@ -63,6 +67,9 @@ public class MainController {
 
     @FXML
     private Label countUserSmallDog;
+
+    @FXML
+    private Label countUserBigDog;
 
     @FXML
     private Button rabbitToSheepButton;
@@ -94,6 +101,11 @@ public class MainController {
     @FXML
     private Button smallDogtoSheepButton;
 
+    @FXML
+    private Button bigDogToCowButton;
+
+    @FXML
+    private Button cowToBigDogButton;
 
     public MainController() {
 
@@ -106,6 +118,8 @@ public class MainController {
         cow.setNumberCowsOfFarm(cowsOfFarm);
         horse.setNumberHorsesOfFarm(horsesOfFarm);
         smallDog.setNumberSmallDogsOfFarm(smallDogsOfFarm);
+        bigDog.setNumberBigDogsOfFarm(bigDogsOfFarm);
+
     }
 
     BlueDig blueDig = new BlueDig();
@@ -116,6 +130,8 @@ public class MainController {
     Cow cow = new Cow();
     Horse horse = new Horse();
     SmallDog smallDog = new SmallDog();
+    BigDog bigDog = new BigDog();
+    Wolf wolf = new Wolf();
     Fox fox = new Fox();
 
     Deque<String> rabbitsOfFarm = new ArrayDeque<>();
@@ -124,6 +140,7 @@ public class MainController {
     Deque<String> cowsOfFarm = new ArrayDeque<>();
     Deque<String> horsesOfFarm = new ArrayDeque<>();
     Deque<String> smallDogsOfFarm = new ArrayDeque<>();
+    Deque<String> bigDogsOfFarm = new ArrayDeque<>();
 
 
     Deque<String> rabbitsOfUser = new ArrayDeque<>();
@@ -132,6 +149,7 @@ public class MainController {
     Deque<String> cowsOfUser = new ArrayDeque<>();
     Deque<String> horsesOfUser = new ArrayDeque<>();
     Deque<String> smallDogsOfUser = new ArrayDeque<>();
+    Deque<String> bigDogsOfUser = new ArrayDeque<>();
 
     public void setDisabledButtonInCaseShortageOfAnimals() {
 
@@ -360,6 +378,7 @@ public class MainController {
         countUserCow.setText(String.valueOf(cowsOfUser.size()));
         if (cowsOfUser.size() > 0) {
             cowToPigButton.setDisable(false);
+            cowToBigDogButton.setDisable(false);
             userCow.setOpacity(1.0);
         }
         if (cowsOfUser.size() >= 2) {
@@ -398,6 +417,7 @@ public class MainController {
         countUserCow.setText(String.valueOf(cowsOfUser.size()));
         if (cowsOfUser.size() == 0) {
             cowToPigButton.setDisable(true);
+            cowToBigDogButton.setDisable(true);
             userCow.setOpacity(0.4);
         }
         if (cowsOfUser.size() < 2) {
@@ -538,6 +558,58 @@ public class MainController {
         setDisabledButtonInCaseShortageOfAnimals();
     }
 
+    public void exchangeCowToBigDog() {
+        if (bigDogsOfFarm.size() >= 1) {
+            cowsOfUser.pop();
+            cowsOfFarm.push("Cow");
+            bigDogsOfFarm.pop();
+            bigDogsOfUser.push("Big Dog");
+        }
+        howManyAnimalsOfFarm();
+
+        countUserBigDog.setText(String.valueOf(bigDogsOfUser.size()));
+        if (bigDogsOfUser.size() > 0) {
+            userBigDog.setOpacity(1.0);
+            bigDogToCowButton.setDisable(false);
+        }
+
+        countUserCow.setText(String.valueOf(cowsOfUser.size()));
+        if (cowsOfUser.size() == 0) {
+            cowToPigButton.setDisable(true);
+            cowToBigDogButton.setDisable(true);
+            userCow.setOpacity(0.4);
+        }
+
+        setDisabledButtonInCaseShortageOfAnimals();
+    }
+
+    public void exchangeBigDogToCow() {
+        if (cowsOfFarm.size() >= 1) {
+            bigDogsOfUser.pop();
+            bigDogsOfFarm.push("Big Dog");
+            cowsOfFarm.pop();
+            cowsOfUser.push("Cow");
+        }
+        howManyAnimalsOfFarm();
+
+        countUserCow.setText(String.valueOf(cowsOfUser.size()));
+        if (cowsOfUser.size() > 0) {
+            userCow.setOpacity(1.0);
+            cowToBigDogButton.setDisable(false);
+            cowToPigButton.setDisable(false);
+        }
+        if (cowsOfUser.size() >= 2) {
+            cowToHorseButton.setDisable(false);
+        }
+
+        countUserBigDog.setText(String.valueOf(bigDogsOfUser.size()));
+        if (bigDogsOfUser.size() == 0) {
+            bigDogToCowButton.setDisable(true);
+            userBigDog.setOpacity(0.4);
+        }
+        setDisabledButtonInCaseShortageOfAnimals();
+    }
+
 
     // metoda po kliknieciu myszką na kość
     public void randomResult() {
@@ -552,6 +624,7 @@ public class MainController {
         userBlueDigResult.setImage(blueDig.assignNumberToPictures(randomNumberBlue));
         userRedDigResult.setImage(redDig.assignNumberToPictures(randomNumberRed));
 
+
         countUserRabbit.setText(String.valueOf(rabbit.addToDequeOffRabbit(rabbitsOfUser, rabbitsOfFarm, randomNumberBlue, randomNumberRed).size()));
         if (rabbitsOfUser.size() > 0) {
             userRabbit.setOpacity(1.0);
@@ -561,17 +634,16 @@ public class MainController {
         }
 
 
-        countUserRabbit.setText(String.valueOf(fox.removeRabbits(rabbitsOfUser, rabbitsOfFarm,smallDogsOfUser,smallDogsOfFarm, randomNumberRed).size()));
+        countUserRabbit.setText(String.valueOf(fox.removeRabbits(rabbitsOfUser, rabbitsOfFarm, smallDogsOfUser, smallDogsOfFarm, randomNumberRed).size()));
         if (rabbitsOfUser.size() == 0) {
             userRabbit.setOpacity(0.4);
             rabbitToSheepButton.setDisable(true);
         }
         countUserSmallDog.setText(String.valueOf(smallDogsOfUser.size()));
-        if(smallDogsOfUser.size()==0){
+        if (smallDogsOfUser.size() == 0) {
             userSmallDog.setOpacity(0.4);
             smallDogtoSheepButton.setDisable(true);
         }
-
 
 
         countUserSheep.setText(String.valueOf(sheep.addToDequeOffSheep(sheepOfUser, sheepOfFarm, randomNumberBlue, randomNumberRed).size()));
@@ -608,6 +680,39 @@ public class MainController {
             userHorse.setOpacity(1.0);
         }
 
+        countUserRabbit.setText(String.valueOf(wolf.removeRabbits(rabbitsOfUser, rabbitsOfFarm, bigDogsOfUser, bigDogsOfFarm, randomNumberBlue).size()));
+        countUserSheep.setText(String.valueOf(wolf.removeSheep(sheepOfUser, sheepOfFarm, bigDogsOfUser, bigDogsOfFarm, randomNumberBlue).size()));
+        countUserPig.setText(String.valueOf(wolf.removePigs(pigsOfUser, pigsOfFarm, bigDogsOfUser, bigDogsOfFarm, randomNumberBlue).size()));
+        countUserCow.setText(String.valueOf(wolf.removeCows(cowsOfUser, cowsOfFarm, bigDogsOfUser, bigDogsOfFarm, randomNumberBlue).size()));
+        countUserBigDog.setText(String.valueOf(wolf.removeBigDog(bigDogsOfUser,bigDogsOfFarm,randomNumberBlue).size()));
+
+        if (rabbitsOfUser.size() == 0) {
+            userRabbit.setOpacity(0.4);
+            rabbitToSheepButton.setDisable(true);
+        }
+        if (sheepOfUser.size() == 0) {
+            userSheep.setOpacity(0.4);
+            sheepToSmallDogButton.setDisable(true);
+            sheepToRabbitButton.setDisable(true);
+            sheepToPigButton.setDisable(true);
+
+        }
+        if (pigsOfUser.size() == 0) {
+            userPig.setOpacity(0.4);
+            pigToCowButton.setDisable(true);
+            pigToSheepButton.setDisable(true);
+        }
+        if (cowsOfUser.size() == 0) {
+            userCow.setOpacity(0.4);
+            cowToBigDogButton.setDisable(true);
+            cowToHorseButton.setDisable(true);
+            cowToPigButton.setDisable(true);
+        }
+        if (bigDogsOfUser.size() == 0) {
+            userBigDog.setOpacity(0.4);
+            bigDogToCowButton.setDisable(true);
+        }
+
 
         setDisabledButtonInCaseShortageOfAnimals();
     }
@@ -619,5 +724,6 @@ public class MainController {
         System.out.println("krów na farmie :" + cowsOfFarm.size());
         System.out.println("Koni na farmie :" + horsesOfFarm.size());
         System.out.println("Małych psów na farmie : " + smallDogsOfFarm.size());
+        System.out.println("Dużych psów na farmie : " + bigDogsOfFarm.size());
     }
 }

@@ -238,7 +238,7 @@
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="cowToBigDogButton" disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Cow to big Dog">
+                  <Button fx:id="cowToBigDogButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeCowToBigDog" prefHeight="39.0" prefWidth="188.0" text="Cow to big Dog">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -272,7 +272,7 @@
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="BigDogToCowButton" disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Big Dog to Cow">
+                  <Button fx:id="bigDogToCowButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeBigDogToCow" prefHeight="39.0" prefWidth="188.0" text="Big Dog to Cow">
                      <font>
                         <Font size="17.0" />
                      </font>
