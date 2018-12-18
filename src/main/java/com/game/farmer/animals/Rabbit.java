@@ -1,4 +1,4 @@
-package com.game.farmer.animals.user;
+package com.game.farmer.animals;
 
 import com.game.farmer.digs.BlueDig;
 import com.game.farmer.digs.RedDig;

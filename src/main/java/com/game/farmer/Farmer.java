@@ -1,5 +1,6 @@
 package com.game.farmer;
 
+import com.game.farmer.Turn.Turn;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -26,5 +27,7 @@ public class Farmer extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("Farmer");
         primaryStage.show();
+
+
     }
 }
