@@ -1,6 +1,5 @@
 package com.game.farmer;
 
-import com.game.farmer.Turn.Turn;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,14 +16,11 @@ public class Farmer extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        FXMLLoader loaderMenu = new FXMLLoader(this.getClass().getResource("/fxml/mainScreen.fxml"));
+        StackPane mainScreen = loaderMenu.load();
+        Scene sceneMenu = new Scene(mainScreen,1261,638);
 
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/boardWindow.fxml"));
-
-
-        StackPane stackPane = loader.load();
-        Scene scene = new Scene(stackPane);
-
-        primaryStage.setScene(scene);
+        primaryStage.setScene(sceneMenu);
         primaryStage.setTitle("Farmer");
         primaryStage.show();
 

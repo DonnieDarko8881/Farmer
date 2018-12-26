@@ -1,12 +1,13 @@
 package com.game.farmer.animals;
 
-import java.util.Deque;
+
 
 public class BigDog {
-    public Deque<String> setNumberBigDogsOfFarm(Deque<String> bigDogsOfFarm) {
+    public int setNumberBigDogsOfFarm(int bigDogsOfFarm) {
 //pamietaj zmienic na 2
+        bigDogsOfFarm=0;
         for (int i = 0; i < 2; i++) {
-            bigDogsOfFarm.push("BigDog");
+            bigDogsOfFarm++;
         }
         return bigDogsOfFarm;
     }

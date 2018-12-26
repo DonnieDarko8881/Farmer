@@ -1,88 +1,90 @@
 package com.game.farmer.animals.enemy;
 
+import javafx.util.Pair;
+
 import java.util.Deque;
 
 //blue dig na 12
 public class Wolf {
 
-    public Deque<String> removeRabbits(Deque<String> rabbitsOfUser, Deque<String> rabbitsOfFarm,
-                                       Deque<String> bigDogsOfUser, Deque<String> bigDogsOfFarm,
-                                       int randomNumberBlue) {
+    public Pair removeRabbits(int rabbitsOfUser, int rabbitsOfFarm,
+                              int bigDogsOfUser, int bigDogsOfFarm,
+                              int randomNumberBlue) {
 
-        if (randomNumberBlue == 12 && rabbitsOfUser.size() > 0) {
-            if (bigDogsOfUser.size() == 0) {
+        if (randomNumberBlue == 12 && rabbitsOfUser > 0) {
+            if (bigDogsOfUser == 0) {
 
-                for (int i = 0; i < rabbitsOfUser.size(); i++) {
-                    rabbitsOfFarm.push("Rabbit");
+                for (int i = 0; i < rabbitsOfUser; i++) {
+                    rabbitsOfFarm++;
                 }
 
-                rabbitsOfUser.clear();
+                rabbitsOfUser = 0;
             }
         }
-        return rabbitsOfUser;
+        return new Pair(rabbitsOfUser,rabbitsOfFarm);
     }
 
-    public Deque<String> removeSheep(Deque<String> sheepOfUser, Deque<String> sheepOfFarm,
-                                     Deque<String> bigDogsOfUser, Deque<String> bigDogsOfFarm,
-                                     int randomNumberBlue) {
+    public Pair removeSheep(int sheepOfUser, int sheepOfFarm,
+                           int bigDogsOfUser, int bigDogsOfFarm,
+                           int randomNumberBlue) {
 
-        if (randomNumberBlue == 12 && sheepOfUser.size() > 0) {
+        if (randomNumberBlue == 12 && sheepOfUser > 0) {
 
-            if (bigDogsOfUser.size() == 0) {
-                for (int i = 0; i < sheepOfUser.size(); i++) {
-                    sheepOfFarm.push("Sheep");
+            if (bigDogsOfUser == 0) {
+                for (int i = 0; i < sheepOfUser; i++) {
+                    sheepOfFarm++;
                 }
 
-                sheepOfUser.clear();
+                sheepOfUser = 0;
             }
         }
-        return sheepOfUser;
+        return new Pair(sheepOfUser,sheepOfFarm);
     }
 
-    public Deque<String> removePigs(Deque<String> pigsOfUser, Deque<String> pigsOfFarm,
-                                    Deque<String> bigDogsOfUser, Deque<String> bigDogsOfFarm,
-                                    int randomNumberBlue) {
+    public Pair removePigs(int pigsOfUser, int pigsOfFarm,
+                          int bigDogsOfUser, int bigDogsOfFarm,
+                          int randomNumberBlue) {
 
-        if (randomNumberBlue == 12 && pigsOfUser.size() > 0) {
-            if (bigDogsOfUser.size() == 0) {
-                for (int i = 0; i < pigsOfUser.size(); i++) {
-                    pigsOfFarm.push("Pig");
+        if (randomNumberBlue == 12 && pigsOfUser > 0) {
+            if (bigDogsOfUser == 0) {
+                for (int i = 0; i < pigsOfUser; i++) {
+                    pigsOfFarm++;
                 }
 
-                pigsOfUser.clear();
+                pigsOfUser = 0;
             }
         }
-        return pigsOfUser;
+        return new Pair(pigsOfUser,pigsOfFarm);
     }
 
-    public Deque<String> removeCows(Deque<String> cowsOfUser, Deque<String> cowsOfFarm,
-                                    Deque<String> bigDogsOfUser, Deque<String> bigDogsOfFarm,
-                                    int randomNumberBlue) {
+    public Pair removeCows(int cowsOfUser, int cowsOfFarm,
+                          int bigDogsOfUser, int bigDogsOfFarm,
+                          int randomNumberBlue) {
 
-        if (randomNumberBlue == 12 && cowsOfUser.size() > 0) {
-            if (bigDogsOfUser.size() == 0) {
-                for (int i = 0; i < cowsOfUser.size(); i++) {
-                    cowsOfFarm.push("Cow");
+        if (randomNumberBlue == 12 && cowsOfUser > 0) {
+            if (bigDogsOfUser == 0) {
+                for (int i = 0; i < cowsOfUser; i++) {
+                    cowsOfFarm++;
                 }
 
-                cowsOfUser.clear();
-            } else if (bigDogsOfUser.size() > 0) {
-                bigDogsOfUser.pop();
-                bigDogsOfFarm.push("Big Dog");
+                cowsOfUser = 0;
+            } else if (bigDogsOfUser > 0) {
+                bigDogsOfUser--;
+                bigDogsOfFarm++;
             }
         }
-        return cowsOfUser;
+        return new Pair(cowsOfUser,cowsOfFarm);
     }
 
-    public Deque<String> removeBigDog(Deque<String> bigDogsOfUser, Deque<String> bigDogsOfFarm,
-                                      int randomNumberBlue) {
+    public Pair removeBigDog(int bigDogsOfUser, int bigDogsOfFarm,
+                            int randomNumberBlue) {
 
         if (randomNumberBlue == 12) {
-            if (bigDogsOfUser.size() > 0) {
-                bigDogsOfUser.pop();
-                bigDogsOfFarm.push("Big Dog");
+            if (bigDogsOfUser > 0) {
+                bigDogsOfUser--;
+                bigDogsOfFarm++;
             }
         }
-        return bigDogsOfUser;
+        return new Pair(bigDogsOfUser,bigDogsOfFarm);
     }
 }

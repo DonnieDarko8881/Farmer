@@ -1,31 +1,34 @@
 package com.game.farmer.animals;
 
+import javafx.util.Pair;
+
 import java.util.Deque;
 
 public class Cow {
-    public Deque<String> addToDequeOffCow(Deque<String> cowsOfUser, Deque<String> cowsOfFarm, int randomNumberBlue) {
+    public Pair addToDequeOffCow(int cowsOfUser, int cowsOfFarm, int randomNumberBlue) {
 
 
-        if (randomNumberBlue == 11 && cowsOfUser.size() > 0) {
-            int currentNumberCows = cowsOfUser.size();
+        if (randomNumberBlue == 11 && cowsOfUser > 0) {
+            int currentNumberCows = cowsOfUser;
             for (int i = 0; i < Math.floor((currentNumberCows + 1) / 2); i++) {
 
-                if (cowsOfFarm.size() > 0) {
+                if (cowsOfFarm > 0) {
 
-                    cowsOfFarm.pop();
-                    cowsOfUser.push("Cow");
+                    cowsOfFarm--;
+                    cowsOfUser++;
                 }
             }
-            return cowsOfUser;
+            return new Pair(cowsOfUser,cowsOfFarm);
         }
 
-        return cowsOfUser;
+        return new Pair(cowsOfUser,cowsOfFarm);
     }
 
-    public Deque<String> setNumberCowsOfFarm(Deque<String> cowsOfFarm) {
+    public int setNumberCowsOfFarm(int cowsOfFarm) {
 //pamietaj zmienic na 12
+        cowsOfFarm=0;
         for (int i = 0; i < 12; i++) {
-            cowsOfFarm.push("Cow");
+            cowsOfFarm++;
         }
         return cowsOfFarm;
     }

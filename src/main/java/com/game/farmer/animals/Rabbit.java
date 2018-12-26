@@ -5,6 +5,7 @@ import com.game.farmer.digs.RedDig;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.util.Pair;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -12,43 +13,44 @@ import java.util.Deque;
 public class Rabbit {
 
 
-    public Deque<String> addToDequeOffRabbit(Deque<String> rabbitsOfUser, Deque<String> rabbitsOfFarm, int randomNumberBlue, int randomNumberRed) {
-        if (randomNumberRed <= 6 && randomNumberBlue <= 6 && rabbitsOfUser.size() == 0) {
-            if (rabbitsOfFarm.size() > 0) {
-                rabbitsOfFarm.pop();
-                rabbitsOfUser.push("Rabbit");
-            }
-            return rabbitsOfUser;
-        } else if (rabbitsOfUser.size() > 0 && randomNumberRed <= 6 && randomNumberBlue <= 6) {
+    public Pair addToDequeOffRabbit(int rabbitsOfUser, int rabbitsOfFarm, int randomNumberBlue, int randomNumberRed) {
 
-            int currentNumberRabbit = rabbitsOfUser.size();
+        if (randomNumberRed <= 6 && randomNumberBlue <= 6 && rabbitsOfUser == 0) {
+            if (rabbitsOfFarm > 0) {
+                rabbitsOfFarm--;
+                rabbitsOfUser++;
+            }
+            return  new Pair(rabbitsOfUser,rabbitsOfFarm);
+        } else if (rabbitsOfUser > 0 && randomNumberRed <= 6 && randomNumberBlue <= 6) {
+
+            int currentNumberRabbit = rabbitsOfUser;
             for (int i = 0; i < Math.floor((currentNumberRabbit + 2) / 2); i++) {
-                if (rabbitsOfFarm.size() > 0) {
-                    rabbitsOfFarm.pop();
-                    rabbitsOfUser.push("Rabbit");
+                if (rabbitsOfFarm > 0) {
+                    rabbitsOfFarm--;
+                    rabbitsOfUser++;
                 }
             }
-            return rabbitsOfUser;
-        } else if (rabbitsOfUser.size() > 0 && (randomNumberRed <= 6 || randomNumberBlue <= 6)) {
+            return  new Pair(rabbitsOfUser,rabbitsOfFarm);
+        } else if (rabbitsOfUser > 0 && (randomNumberRed <= 6 || randomNumberBlue <= 6)) {
 
-            int currentNumberRabbit = rabbitsOfUser.size();
+            int currentNumberRabbit = rabbitsOfUser;
             for (int i = 0; i < Math.floor((currentNumberRabbit + 1) / 2); i++) {
-                if (rabbitsOfFarm.size() > 0) {
-                    rabbitsOfFarm.pop();
-                    rabbitsOfUser.push("Rabbit");
+                if (rabbitsOfFarm > 0) {
+                    rabbitsOfFarm--;
+                    rabbitsOfUser++;
                 }
             }
-            return rabbitsOfUser;
+            return  new Pair(rabbitsOfUser,rabbitsOfFarm);
         }
 
 
-        return rabbitsOfUser;
+        return  new Pair(rabbitsOfUser,rabbitsOfFarm);
     }
 
-    public Deque<String> setNumberRabbitsOfFarm(Deque<String> rabbitsOfFarm) {
+    public int setNumberRabbitsOfFarm(int rabbitsOfFarm) {
 
         for (int i = 0; i < 60; i++) {
-            rabbitsOfFarm.push("Rabbit");
+            rabbitsOfFarm++;
         }
         return rabbitsOfFarm;
     }

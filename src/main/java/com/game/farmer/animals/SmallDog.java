@@ -3,10 +3,11 @@ package com.game.farmer.animals;
 import java.util.Deque;
 
 public class SmallDog {
-    public Deque<String> setNumberSmallDogsOfFarm(Deque<String> smallDogsOfFarm) {
+    public int setNumberSmallDogsOfFarm(int smallDogsOfFarm) {
 //pamietaj zmienic na 4
+        smallDogsOfFarm=0;
         for (int i = 0; i < 4; i++) {
-            smallDogsOfFarm.push("smallDog");
+            smallDogsOfFarm++;
         }
         return smallDogsOfFarm;
     }
