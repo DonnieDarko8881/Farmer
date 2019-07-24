@@ -194,14 +194,6 @@ public class MainController {
         horsesOfComputer = 0;
         smallDogsOfComputer = 0;
         bigDogsOfComputer = 0;
-       /* rabbit.setNumberRabbitsOfFarm(rabbitsOfFarm);
-        sheep.setNumberSheepOfFarm(sheepOfFarm);
-        pig.setNumberPigOfFarm(pigsOfFarm);
-        cow.setNumberCowsOfFarm(cowsOfFarm);
-        horse.setNumberHorsesOfFarm(horsesOfFarm);
-        smallDog.setNumberSmallDogsOfFarm(smallDogsOfFarm);
-        bigDog.setNumberBigDogsOfFarm(bigDogsOfFarm);
-*/
         turn.firstTurn(userResultLabel);
 
     }
@@ -218,8 +210,8 @@ public class MainController {
     Wolf wolf = new Wolf();
     Fox fox = new Fox();
     Turn turn = new Turn();
-    User user = new User("user");
-    User computer = new User("computer");
+    User user = new User("user 1");
+    User computer = new User("user 2");
 
 
     int rabbitsOfFarm;
@@ -523,7 +515,6 @@ public class MainController {
             if (rabbitsOfComputer > 6) {
                 rabbitToSheepButton.setDisable(false);
             }
-
             setDisabledButtonInCaseShortageOfAnimals();
         }
         win(rabbitsOfUser, sheepOfUser, pigsOfUser, cowsOfUser, horsesOfUser, rabbitsOfComputer,

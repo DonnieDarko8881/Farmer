@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="instructionPane" prefHeight="638.0" prefWidth="1261.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.fx.controller.InstructionController">
+   <children>
+      <ImageView fitHeight="647.0" fitWidth="1393.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/tloo.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="295.0" layoutY="54.0" prefHeight="516.0" prefWidth="715.0" style="-fx-background-color: white;">
+          <children>
+              <ScrollPane layoutX="48.0" layoutY="92.0" prefHeight="338.0" prefWidth="604.0">
+               <content>
+                  <Label prefHeight="1009.0" prefWidth="583.0" text="Wszyscy gracze rozpoczynają grę z pustymi zagrodami. Gracz, na którego przypada kolejka, rzuca dwiema dwunastościennymiymi kostkami. Gdy gracz nie ma jeszcze żadnych zwierząt w swojej zagrodzie, a na kostkach wypadną różne obrazki, to nic się nie dzieje. Jeżeli jednak na obu kostkach wypadnie obrazek takiego samego zwierzęcia, gracz dostaje to zwierzę z banku, a właściwie ze stada, bo takiej nazwy używa się w grze. Gdy gracz ma już jakieś zwierzęta, dodaje się ich liczbę do tego co wypadło na kostkach i wynik dzieli przez dwa (z ewentualnym zaokrągleniem w dół). Jeżeli gracz ma na przykład 5 królików, 3 owce i 2 świnie, a na kostkach wypadł królik i owca, to dostaje 3 króliki i 2 owce. Może się jednak zdarzyć, że w stadzie jest mniej zwierząt, niz graczowi należy sie w wyniku rzutu. W takiej sytuacji gracz otrzymuje tylko tyle, ile jest w stadzie, a reszta przepada. Przed rzutem kostkami można dokonać jednej wymiany ze stadem, po kursie podanym w specjalnej tabeli. Jedna owca jest warta 6 królików, jedną świnię można wymienić na dwie owce itd. Można albo wymienić jedno cenniejsze zwierzę na odpowiednią liczbę tańszych (np. jedną świnię ma owcę i 6 królików), albo złożyć kilka mniej cennych na jedno droższe (np. jedną krowę, dwie świnie i dwie owce na jednego konia). Gra trwa do chwili, gdy jeden z graczy zbierze przynajmniej po jednym przedstawicielu każdego z pięciu gatunków zwierząt: królika, owcę, świnię, krowę i konia.Gra nie byłaby specjalnie ciekawa, gdyby nie element ryzyka. Na kostkach jest takze lis i wilk. Co się dzieje , gdy gracz wylosuje jednego z drapieżników? Jeżeli na kostce wypadnie lis, gracz traci wszystkie króliki. Inne zwierzęta nie są przez lisa zagrożone. Gorzej jest wtedy, gdy wypadnie wilk. Gracz traci wówczas wszystkie zwierzęta z wyjątkiem konia.Ale przed zagrożeniem ze strony lisa i wilka można się zabezpieczyć, kupując psy. Mały pies, który jest wart tyle co owca, czyli 6 królików, chroni przed atakiem lisa. Gdy gracz ma małego psa, a na kostce wypadnie lis, gracz oddaje do stada małego psa, a króliki pozostają w jego zagrodzie. Analogicznie duży pies, stanowiący równowartość krowy, chroni przed wilkiem. " textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </content>
+              </ScrollPane>
+              <Button fx:id="menuButton" layoutX="311.0" layoutY="456.0" mnemonicParsing="false" onAction="#backMenuFromInstruction" text="Menu" />
+            <Label layoutX="280.0" layoutY="36.0" prefHeight="35.0" prefWidth="141.0" text="Instruction" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+          </children>
+      </Pane>
+   </children>
+</Pane>
