@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="winnerPlane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.fx.controller.WinController">
+   <children>
+      <ImageView fitHeight="656.0" fitWidth="1364.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/tloo.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="382.0" layoutY="124.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="informationOfWinner" layoutX="125.0" layoutY="56.0" prefHeight="171.0" prefWidth="430.0" text="Congrats! You Are Winner!" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <Button fx:id="Menu" layoutX="221.0" layoutY="261.0" mnemonicParsing="false" onAction="#openMenu" prefHeight="39.0" prefWidth="110.0" text="Menu" />
+            <Button fx:id="Exit" layoutX="221.0" layoutY="331.0" mnemonicParsing="false" onAction="#openExitWin" prefHeight="39.0" prefWidth="110.0" text="Exit" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

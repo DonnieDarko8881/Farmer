@@ -27,8 +27,8 @@ public class WinController {
 
     private MainScreen mainScreen;
     MainController mainController;
-    User user = new User("User");
-    User computer = new User("computer");
+    User user = new User("User 1");
+    User computer = new User("User 2");
 
 
     @FXML

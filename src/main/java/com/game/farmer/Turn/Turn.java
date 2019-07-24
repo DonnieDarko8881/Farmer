@@ -1,16 +1,6 @@
 package com.game.farmer.Turn;
-
-import com.game.farmer.users.User;
 import javafx.scene.control.Label;
-import javafx.scene.paint.Color;
-
-import java.util.Deque;
-
 public class Turn {
-     User user = new User("User");
-     User computer = new User("computer");
-
-
 
     public void firstTurn(Label userResultLabel){
      userResultLabel.setStyle("-fx-background-color: CADETBLUE;");
@@ -29,14 +19,4 @@ public class Turn {
         }
 
     }
-    public String infoWhoWin(Label userResultLabel, Label computerResultLabel){
-        if(userResultLabel.getStyle().equals("-fx-background-color: CADETBLUE;")){
-            return"Congrats " +user.getName()+ "! You Win ";
-        }
-        else if(computerResultLabel.getStyle().equals("-fx-background-color: RED;")) {
-            return "Congrats " + computer.getName() + "! You Win ";
-        }
-        return "";
-    }
-
 }

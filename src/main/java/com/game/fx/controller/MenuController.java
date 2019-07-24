@@ -21,9 +21,6 @@ public class MenuController {
     private Button startButton;
 
     @FXML
-    private Button creatorButton;
-
-    @FXML
     private Pane menuFarmerPane;
 
     private MainScreen mainScreen;

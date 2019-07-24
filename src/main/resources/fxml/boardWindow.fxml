@@ -10,7 +10,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane fx:id="stackPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="1261.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.fx.controller.MainController">
+
+<Pane fx:id="stackPaneMain" prefHeight="638.0" prefWidth="1261.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.fx.controller.MainController">
    <children>
       <AnchorPane fx:id="farmerBoardAnchorPane" prefHeight="579.0" prefWidth="1198.0">
          <children>
@@ -295,4 +296,4 @@
          </children>
       </AnchorPane>
    </children>
-</StackPane>
+</Pane>
