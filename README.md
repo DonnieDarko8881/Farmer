@@ -1,4 +1,5 @@
 # Farmer
 Farmer game according to Super Farmer
-Farmer_Begin.png
-Farmer_During.png
+![Begin](Farmer_Begin.png)
+![During](Farmer_During.png)
+
