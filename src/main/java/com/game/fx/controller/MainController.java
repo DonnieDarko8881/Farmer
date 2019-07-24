@@ -7,8 +7,6 @@ import com.game.farmer.animals.enemy.Fox;
 import com.game.farmer.animals.enemy.Wolf;
 import com.game.farmer.digs.BlueDig;
 import com.game.farmer.digs.RedDig;
-import com.game.farmer.users.User;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -18,8 +16,6 @@ import javafx.scene.layout.Pane;
 import javafx.util.Pair;
 
 import java.io.IOException;
-import java.util.ArrayDeque;
-import java.util.Deque;
 
 public class MainController {
 
@@ -205,13 +201,9 @@ public class MainController {
     Pig pig = new Pig();
     Cow cow = new Cow();
     Horse horse = new Horse();
-    SmallDog smallDog = new SmallDog();
-    BigDog bigDog = new BigDog();
     Wolf wolf = new Wolf();
     Fox fox = new Fox();
     Turn turn = new Turn();
-    User user = new User("user 1");
-    User computer = new User("user 2");
 
 
     int rabbitsOfFarm;
@@ -387,8 +379,6 @@ public class MainController {
                 sheepOfFarm--;
                 sheepOfUser++;
             }
-            //potem do usunięcia !!!!!!!!!!
-            howManyAnimalsOfFarm();
 
             countUserSheep.setText(String.valueOf(sheepOfUser));
             if (sheepOfUser > 0) {
@@ -409,8 +399,7 @@ public class MainController {
             }
 
             setDisabledButtonInCaseShortageOfAnimals();
-            ///////////////////////
-            ///////////////
+
         } else if (computerResultLabel.getStyle() == "-fx-background-color: RED;") {
             if (sheepOfFarm > 0) {
                 for (int i = 0; i < 6; i++) {
@@ -420,8 +409,6 @@ public class MainController {
                 sheepOfFarm--;
                 sheepOfComputer++;
             }
-            //potem do usunięcia !!!!!!!!!!
-            howManyAnimalsOfFarm();
 
             countComputerSheep.setText(String.valueOf(sheepOfComputer));
             if (sheepOfComputer > 0) {
@@ -461,9 +448,6 @@ public class MainController {
                 }
             }
 
-            //potem do usuniecia
-            howManyAnimalsOfFarm();
-
             countUserSheep.setText(String.valueOf(sheepOfUser));
             if (sheepOfUser == 0) {
                 sheepToRabbitButton.setDisable(true);
@@ -494,9 +478,6 @@ public class MainController {
                     rabbitsOfComputer++;
                 }
             }
-
-            //potem do usuniecia
-            howManyAnimalsOfFarm();
 
             countComputerSheep.setText(String.valueOf(sheepOfComputer));
             if (sheepOfComputer == 0) {
@@ -532,10 +513,6 @@ public class MainController {
                 pigsOfUser++;
             }
 
-
-            //potem do usunięcia
-            howManyAnimalsOfFarm();
-//
             countUserPig.setText(String.valueOf(pigsOfUser));
             if (pigsOfUser > 0) {
                 pigToSheepButton.setDisable(false);
@@ -565,10 +542,6 @@ public class MainController {
                 pigsOfComputer++;
             }
 
-
-            //potem do usunięcia
-            howManyAnimalsOfFarm();
-//
             countComputerPig.setText(String.valueOf(pigsOfComputer));
             if (pigsOfComputer > 0) {
                 pigToSheepButton.setDisable(false);
@@ -607,9 +580,6 @@ public class MainController {
                 }
             }
 
-            //potem do usuniecia
-            howManyAnimalsOfFarm();
-
             countUserPig.setText(String.valueOf(pigsOfUser));
             if (pigsOfUser == 0) {
                 pigToSheepButton.setDisable(true);
@@ -645,9 +615,6 @@ public class MainController {
                 }
             }
 
-            //potem do usuniecia
-            howManyAnimalsOfFarm();
-
             countComputerPig.setText(String.valueOf(pigsOfComputer));
             if (pigsOfComputer == 0) {
                 pigToSheepButton.setDisable(true);
@@ -656,7 +623,6 @@ public class MainController {
             if (pigsOfComputer < 3) {
                 pigToCowButton.setDisable(true);
             }
-
 
             countComputerSheep.setText(String.valueOf(sheepOfComputer));
             if (sheepOfComputer > 0) {
@@ -685,9 +651,6 @@ public class MainController {
                 cowsOfUser++;
             }
 
-            //potem do usunięcia
-            howManyAnimalsOfFarm();
-//
             countUserCow.setText(String.valueOf(cowsOfUser));
             if (cowsOfUser > 0) {
                 cowToPigButton.setDisable(false);
@@ -719,9 +682,6 @@ public class MainController {
                 cowsOfComputer++;
             }
 
-            //potem do usunięcia
-            howManyAnimalsOfFarm();
-//
             countComputerCow.setText(String.valueOf(cowsOfComputer));
             if (cowsOfComputer > 0) {
                 cowToPigButton.setDisable(false);
@@ -760,10 +720,7 @@ public class MainController {
                         pigsOfUser++;
                     }
                 }
-           }
-
-            //potem do usuniecia
-            howManyAnimalsOfFarm();
+            }
 
             countUserCow.setText(String.valueOf(cowsOfUser));
             if (cowsOfUser == 0) {
@@ -799,9 +756,6 @@ public class MainController {
                 }
             }
 
-            //potem do usuniecia
-            howManyAnimalsOfFarm();
-
             countComputerCow.setText(String.valueOf(cowsOfComputer));
             if (cowsOfComputer == 0) {
                 cowToPigButton.setDisable(true);
@@ -811,7 +765,6 @@ public class MainController {
             if (cowsOfComputer < 2) {
                 cowToHorseButton.setDisable(true);
             }
-
 
             countComputerPig.setText(String.valueOf(pigsOfComputer));
             if (pigsOfComputer > 0) {
@@ -839,9 +792,6 @@ public class MainController {
                 horsesOfUser++;
             }
 
-            //potem do usunięcia
-            howManyAnimalsOfFarm();
-//
             countUserHorse.setText(String.valueOf(horsesOfUser));
             if (horsesOfUser > 0) {
                 horseToCowButton.setDisable(false);
@@ -869,9 +819,6 @@ public class MainController {
                 horsesOfComputer++;
             }
 
-            //potem do usunięcia
-            howManyAnimalsOfFarm();
-//
             countComputerHorse.setText(String.valueOf(horsesOfComputer));
             if (horsesOfComputer > 0) {
                 horseToCowButton.setDisable(false);
@@ -907,15 +854,12 @@ public class MainController {
                     }
                 }
             }
-            //potem do usuniecia
-            howManyAnimalsOfFarm();
 
             countUserHorse.setText(String.valueOf(horsesOfUser));
             if (horsesOfUser == 0) {
                 horseToCowButton.setDisable(true);
                 userHorse.setOpacity(0.4);
             }
-
 
             countUserCow.setText(String.valueOf(cowsOfUser));
             if (cowsOfUser > 0) {
@@ -939,8 +883,6 @@ public class MainController {
                     }
                 }
             }
-            //potem do usuniecia
-            howManyAnimalsOfFarm();
 
             countComputerHorse.setText(String.valueOf(horsesOfComputer));
             if (horsesOfComputer == 0) {
@@ -973,7 +915,6 @@ public class MainController {
                 smallDogsOfFarm--;
                 smallDogsOfUser++;
             }
-            howManyAnimalsOfFarm();
 
             countUserSmallDog.setText(String.valueOf(smallDogsOfUser));
             if (smallDogsOfUser > 0) {
@@ -996,7 +937,6 @@ public class MainController {
                 smallDogsOfFarm--;
                 smallDogsOfComputer++;
             }
-            howManyAnimalsOfFarm();
 
             countComputerSmallDog.setText(String.valueOf(smallDogsOfComputer));
             if (smallDogsOfComputer > 0) {
@@ -1023,7 +963,6 @@ public class MainController {
                 sheepOfFarm--;
                 sheepOfUser++;
             }
-            howManyAnimalsOfFarm();
 
             countUserSheep.setText(String.valueOf(sheepOfUser));
             if (sheepOfUser > 0) {
@@ -1048,7 +987,6 @@ public class MainController {
                 sheepOfFarm--;
                 sheepOfComputer++;
             }
-            howManyAnimalsOfFarm();
 
             countComputerSheep.setText(String.valueOf(sheepOfComputer));
             if (sheepOfComputer > 0) {
@@ -1079,7 +1017,6 @@ public class MainController {
                 bigDogsOfFarm--;
                 bigDogsOfUser++;
             }
-            howManyAnimalsOfFarm();
 
             countUserBigDog.setText(String.valueOf(bigDogsOfUser));
             if (bigDogsOfUser > 0) {
@@ -1102,7 +1039,6 @@ public class MainController {
                 bigDogsOfFarm--;
                 bigDogsOfComputer++;
             }
-            howManyAnimalsOfFarm();
 
             countComputerBigDog.setText(String.valueOf(bigDogsOfComputer));
             if (bigDogsOfComputer > 0) {
@@ -1129,7 +1065,6 @@ public class MainController {
                 cowsOfFarm--;
                 cowsOfUser++;
             }
-            howManyAnimalsOfFarm();
 
             countUserCow.setText(String.valueOf(cowsOfUser));
             if (cowsOfUser > 0) {
@@ -1154,7 +1089,6 @@ public class MainController {
                 cowsOfFarm--;
                 cowsOfComputer++;
             }
-            howManyAnimalsOfFarm();
 
             countComputerCow.setText(String.valueOf(cowsOfComputer));
             if (cowsOfComputer > 0) {
@@ -1178,17 +1112,10 @@ public class MainController {
     }
 
 
-    // metoda po kliknieciu myszką na kość
     public void randomResult() {
-
-
-        howManyAnimalsOfFarm();
         if (userResultLabel.getStyle() == "-fx-background-color: CADETBLUE;") {
             int randomNumberRed = RedDig.randomNumber();
             int randomNumberBlue = BlueDig.randomNumber();
-
-
-            //rzuty kością dający rezultat
 
             userBlueDigResult.setImage(blueDig.assignNumberToPictures(randomNumberBlue));
             userRedDigResult.setImage(redDig.assignNumberToPictures(randomNumberRed));
@@ -1300,7 +1227,6 @@ public class MainController {
             bigDogsOfFarm = (int) bigDogsAfterWolf.getValue();
             countUserBigDog.setText(String.valueOf(bigDogsOfUser));
 
-
             if (rabbitsOfUser == 0) {
                 userRabbit.setOpacity(0.4);
                 rabbitToSheepButton.setDisable(true);
@@ -1328,8 +1254,6 @@ public class MainController {
                 bigDogToCowButton.setDisable(true);
             }
 
-
-            //setDisabledButtonInCaseShortageOfAnimals();
             SetDisibility.setDisability(rabbitToSheepButton, sheepToRabbitButton,
                     sheepToSmallDogButton, smallDogtoSheepButton, sheepToPigButton, pigToSheepButton, pigToCowButton, cowToPigButton
                     , cowToHorseButton, horseToCowButton, cowToBigDogButton, bigDogToCowButton, rabbitsOfComputer, sheepOfComputer,
@@ -1342,15 +1266,13 @@ public class MainController {
             setDisabledButtonInCaseShortageOfAnimals();
         }
 
-//////////////////////// część komputera
+//////////////////////// część drugiego użytkownika
         ////////////////////////////////////
         //////////////////////////////
         else if (computerResultLabel.getStyle() == "-fx-background-color: RED;") {
             int randomNumberRed = RedDig.randomNumber();
             int randomNumberBlue = BlueDig.randomNumber();
 
-
-            //rzuty kością dający rezultat
 
             computerBlueDigResult.setImage(blueDig.assignNumberToPictures(randomNumberBlue));
             computerRedDigResult.setImage(redDig.assignNumberToPictures(randomNumberRed));
@@ -1414,7 +1336,6 @@ public class MainController {
                 pigToCowButton.setDisable(false);
             }
 
-
             final Pair cowResult = cow.addToDequeOffCow(cowsOfComputer, cowsOfFarm, randomNumberBlue);
             cowsOfComputer = (int) cowResult.getKey();
             cowsOfFarm = (int) cowResult.getValue();
@@ -1435,7 +1356,6 @@ public class MainController {
                 horseToCowButton.setDisable(false);
                 computerHorse.setOpacity(1.0);
             }
-
 
             final Pair rabbitsAfterWolf = wolf.removeRabbits(rabbitsOfComputer, rabbitsOfFarm, bigDogsOfComputer,
                     bigDogsOfFarm, randomNumberBlue);
@@ -1502,19 +1422,7 @@ public class MainController {
             turn.nextTurn(userResultLabel, computerResultLabel);
 
             setDisabledButtonInCaseShortageOfAnimals();
-
-
         }
-    }
-
-    public void howManyAnimalsOfFarm() {
-        System.out.println("króliki w farmie : " + rabbitsOfFarm);
-        System.out.println("owce w farmie: " + sheepOfFarm);
-        System.out.println("świrnie w farmie " + pigsOfFarm);
-        System.out.println("krów na farmie :" + cowsOfFarm);
-        System.out.println("Koni na farmie :" + horsesOfFarm);
-        System.out.println("Małych psów na farmie : " + smallDogsOfFarm);
-        System.out.println("Dużych psów na farmie : " + bigDogsOfFarm);
     }
 
     private MainScreen mainScreen;
@@ -1524,15 +1432,13 @@ public class MainController {
     }
 
 
-
-
     public void win(int rabbitsOfUser,
                     int sheepOfUser, int pigsOfUser, int cowsOfUser,
                     int horsesOfUser, int rabbitsOfComputer,
                     int sheepOfComputer, int pigsOfComputer, int cowsOfComputer,
                     int horsesOfComputer) {
         if ((rabbitsOfUser > 0 && sheepOfUser > 0 && pigsOfUser > 0 && cowsOfUser > 0 && horsesOfUser > 0)
-                ||(rabbitsOfComputer > 0 && sheepOfComputer > 0 && pigsOfComputer > 0 && cowsOfComputer > 0 && horsesOfComputer > 0)) {
+                || (rabbitsOfComputer > 0 && sheepOfComputer > 0 && pigsOfComputer > 0 && cowsOfComputer > 0 && horsesOfComputer > 0)) {
             FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/winWindow.fxml"));
             Pane pane = null;
             try {
@@ -1545,12 +1451,8 @@ public class MainController {
             winController.infoWhoWin(userResultLabel, computerResultLabel);
             mainScreen.setScreen(pane);
 
-
         }
-
-
     }
-
 }
 
 

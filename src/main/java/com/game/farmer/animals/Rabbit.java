@@ -1,14 +1,5 @@
 package com.game.farmer.animals;
-
-import com.game.farmer.digs.BlueDig;
-import com.game.farmer.digs.RedDig;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import javafx.util.Pair;
-
-import java.util.ArrayDeque;
-import java.util.Deque;
 
 public class Rabbit {
 
@@ -46,16 +37,6 @@ public class Rabbit {
 
         return  new Pair(rabbitsOfUser,rabbitsOfFarm);
     }
-
-    public int setNumberRabbitsOfFarm(int rabbitsOfFarm) {
-
-        for (int i = 0; i < 60; i++) {
-            rabbitsOfFarm++;
-        }
-        return rabbitsOfFarm;
-    }
-
-
 }
 
 

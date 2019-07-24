@@ -43,14 +43,4 @@ public class Sheep {
 
         return new Pair(sheepOfUser,sheepOfFarm);
     }
-
-  /*  public int setNumberSheepOfFarm(int sheepOfFarm) {
-//pamietaj zmienic na 24
-
-        for (int i = 0; i < 24; i++) {
-            sheepOfFarm++;
-        }
-        return sheepOfFarm;
-    }
-    */
 }
