@@ -1,5 +1,4 @@
-# Farmer
-Farmer game according to Super Farmer
+# Farmer - Game Board 
 ![Begin](Farmer_Begin.png)
 ![During](Farmer_During.png)
 
