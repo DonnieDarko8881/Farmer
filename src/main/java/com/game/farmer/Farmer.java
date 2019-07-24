@@ -3,9 +3,9 @@ package com.game.farmer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
+
 import javafx.stage.Stage;
 
 public class Farmer extends Application {
@@ -16,15 +16,14 @@ public class Farmer extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        FXMLLoader loaderMenu = new FXMLLoader(this.getClass().getResource("/fxml/mainScreen.fxml"));
+        StackPane mainScreen = loaderMenu.load();
+        Scene sceneMenu = new Scene(mainScreen,1261,638);
 
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(this.getClass().getResource("/fxml/boardWindow.fxml"));
-
-        StackPane stackPane = loader.load();
-        Scene scene = new Scene(stackPane);
-
-        primaryStage.setScene(scene);
+        primaryStage.setScene(sceneMenu);
         primaryStage.setTitle("Farmer");
         primaryStage.show();
+
+
     }
 }

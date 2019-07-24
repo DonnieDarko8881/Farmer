@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,158 +10,157 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="1261.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane fx:id="stackPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="1261.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.fx.controller.MainController">
    <children>
-      <AnchorPane prefHeight="579.0" prefWidth="1198.0">
+      <AnchorPane fx:id="farmerBoardAnchorPane" prefHeight="579.0" prefWidth="1198.0">
          <children>
-            <AnchorPane blendMode="EXCLUSION" layoutX="303.0" layoutY="34.0" prefHeight="258.0" prefWidth="526.0">
+            <AnchorPane fx:id="computerBoard" blendMode="EXCLUSION" layoutX="303.0" layoutY="34.0" prefHeight="258.0" prefWidth="526.0">
                <children>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="43.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="computerRabbit" fitHeight="75.0" fitWidth="75.0" layoutX="43.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/rabbit.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="43.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="computerSheep" fitHeight="75.0" fitWidth="75.0" layoutX="43.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/sheep.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="175.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="computerCow" fitHeight="75.0" fitWidth="75.0" layoutX="175.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/cow.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="313.0" layoutY="62.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="computerHorse" fitHeight="75.0" fitWidth="75.0" layoutX="313.0" layoutY="62.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/horse.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="437.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="computerSmallDog" fitHeight="75.0" fitWidth="75.0" layoutX="437.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/smallDog.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="437.0" layoutY="146.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="computerBigDog" fitHeight="75.0" fitWidth="75.0" layoutX="437.0" layoutY="146.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/bigDog.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="175.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="computerPig" fitHeight="75.0" fitWidth="75.0" layoutX="175.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/pig.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="80.0" layoutY="85.0" text="0">
+                  <Label fx:id="countComputerRabbit" layoutX="80.0" layoutY="85.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="351.0" layoutY="145.0" text="0">
+                  <Label fx:id="countComputerHorse" layoutX="351.0" layoutY="145.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="213.0" layoutY="85.0" text="0">
+                  <Label fx:id="countComputerPig" layoutX="213.0" layoutY="85.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="480.0" layoutY="84.0" text="0">
+                  <Label fx:id="countComputerSmallDog" layoutX="480.0" layoutY="84.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="213.0" layoutY="208.0" text="0">
+                  <Label fx:id="countComputerCow" layoutX="213.0" layoutY="208.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="81.0" layoutY="208.0" text="0">
+                  <Label fx:id="countComputerSheep" layoutX="81.0" layoutY="208.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="485.0" layoutY="230.0" text="0">
+                  <Label fx:id="countComputerBigDog" layoutX="485.0" layoutY="230.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <ImageView fitHeight="75.0" fitWidth="162.0" layoutX="43.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="digs" fitHeight="75.0" fitWidth="162.0" layoutX="43.0" layoutY="270.0" onMouseClicked="#randomResult" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../pictures/dices.png" />
                </image>
             </ImageView>
-            <AnchorPane layoutX="303.0" layoutY="360.0" prefHeight="244.0" prefWidth="526.0">
+            <AnchorPane fx:id="UserBoard" layoutX="303.0" layoutY="360.0" prefHeight="244.0" prefWidth="526.0">
                <children>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="43.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="userRabbit" fitHeight="75.0" fitWidth="75.0" layoutX="43.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/rabbit.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="43.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="userSheep" fitHeight="75.0" fitWidth="75.0" layoutX="43.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/sheep.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="175.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="userCow" fitHeight="75.0" fitWidth="75.0" layoutX="175.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/cow.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="313.0" layoutY="62.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="userHorse" fitHeight="75.0" fitWidth="75.0" layoutX="313.0" layoutY="62.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/horse.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="437.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="userSmallDog" fitHeight="75.0" fitWidth="75.0" layoutX="437.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/smallDog.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="437.0" layoutY="146.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="userBigDog" fitHeight="75.0" fitWidth="75.0" layoutX="437.0" layoutY="146.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/bigDog.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="175.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="userPig" fitHeight="75.0" fitWidth="75.0" layoutX="175.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../pictures/pig.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="478.0" layoutY="80.0" text="0">
+                  <Label fx:id="countUserSmallDog" layoutX="478.0" layoutY="80.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="75.0" layoutY="80.0" text="0">
+                  <Label fx:id="countUserRabbit" layoutX="75.0" layoutY="80.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="79.0" layoutY="204.0" text="0">
+                  <Label fx:id="countUserSheep" layoutX="79.0" layoutY="204.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="349.0" layoutY="141.0" text="0">
+                  <Label fx:id="countUserHorse" layoutX="349.0" layoutY="141.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="211.0" layoutY="204.0" text="0">
+                  <Label fx:id="countUserCow" layoutX="211.0" layoutY="204.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="211.0" layoutY="81.0" text="0">
+                  <Label fx:id="countUserPig" layoutX="211.0" layoutY="81.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="483.0" layoutY="226.0" text="0">
+                  <Label fx:id="countUserBigDog" layoutX="483.0" layoutY="226.0" text="0">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
@@ -176,15 +177,35 @@
                   <Font name="System Bold" size="22.0" />
                </font>
             </Label>
-            <Label layoutX="40.0" layoutY="21.0" prefHeight="59.0" prefWidth="194.0" text="Computer Result" textAlignment="CENTER" textOverrun="CLIP">
+            <Label fx:id="computerResultLabel" layoutX="40.0" layoutY="21.0" prefHeight="59.0" prefWidth="194.0" style="-fx-background-color: White;" text="  Computer Result" textOverrun="CLIP">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
             </Label>
-            <Label layoutX="40.0" layoutY="544.0" prefHeight="59.0" prefWidth="194.0" text="User Result" textAlignment="CENTER" textOverrun="CLIP">
+            <Label fx:id="userResultLabel" layoutX="40.0" layoutY="544.0" prefHeight="59.0" prefWidth="194.0" style="-fx-background-color: White;" text="      User Result" textAlignment="CENTER" textOverrun="CLIP">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
             </Label>
             <Label layoutX="985.0" layoutY="34.0" prefHeight="59.0" prefWidth="147.0" text="Exchange..." textAlignment="JUSTIFY">
                <font>
@@ -193,32 +214,32 @@
             </Label>
             <VBox layoutX="867.0" layoutY="93.0" prefHeight="235.0" prefWidth="173.0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="210.0" text="Rabbit to Sheep">
+                  <Button fx:id="rabbitToSheepButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeRabbitToSheep" prefHeight="39.0" prefWidth="210.0" text="Rabbit to Sheep">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="204.0" text="Sheep to Pig">
+                  <Button fx:id="sheepToPigButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeSheepToPig" prefHeight="39.0" prefWidth="204.0" text="Sheep to Pig">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="224.0" text="Pig to Cow">
+                  <Button fx:id="pigToCowButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangePigToCow" prefHeight="39.0" prefWidth="224.0" text="Pig to Cow">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="202.0" text="Cow to Horse">
+                  <Button fx:id="cowToHorseButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeCowToHorse" prefHeight="39.0" prefWidth="202.0" text="Cow to Horse">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="199.0" text="Sheep to small Dog">
+                  <Button fx:id="sheepToSmallDogButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeSheepToSmallDog" prefHeight="39.0" prefWidth="199.0" text="Sheep to small Dog">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Cow to big Dog">
+                  <Button fx:id="cowToBigDogButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeCowToBigDog" prefHeight="39.0" prefWidth="188.0" text="Cow to big Dog">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -227,38 +248,50 @@
             </VBox>
             <VBox layoutX="1059.0" layoutY="93.0" prefHeight="235.0" prefWidth="173.0">
                <children>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="210.0" text="Rabbit to Sheep">
+                  <Button fx:id="sheepToRabbitButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeSheepToRabbits" prefHeight="39.0" prefWidth="210.0" text="Sheep to Rabbit">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="204.0" text="Sheep to Pig">
+                  <Button fx:id="pigToSheepButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangePigToSheep" prefHeight="39.0" prefWidth="204.0" text="Pig to Sheep">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="224.0" text="Pig to Cow">
+                  <Button fx:id="cowToPigButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeCowToPig" prefHeight="39.0" prefWidth="224.0" text="Cow to Pig">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="202.0" text="Cow to Horse">
+                  <Button fx:id="horseToCowButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeHorseToCow" prefHeight="39.0" prefWidth="202.0" text="Horse to Cow">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="199.0" text="Sheep to small Dog">
+                  <Button fx:id="smallDogtoSheepButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeSmallDogToSheep" prefHeight="39.0" prefWidth="199.0" text="Small Dog to Sheep">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="188.0" text="Cow to big Dog">
+                  <Button fx:id="bigDogToCowButton" disable="true" mnemonicParsing="false" onMouseClicked="#exchangeBigDogToCow" prefHeight="39.0" prefWidth="188.0" text="Big Dog to Cow">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
                </children>
             </VBox>
+            <HBox fx:id="computerResult" layoutX="34.0" layoutY="111.0" prefHeight="101.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="computerBlueDigResult" fitHeight="101.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="computerRedDigResult" fitHeight="101.0" fitWidth="115.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox fx:id="computerResult1" layoutX="34.0" layoutY="414.0" prefHeight="101.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="userBlueDigResult" fitHeight="101.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="userRedDigResult" fitHeight="101.0" fitWidth="107.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </children>
