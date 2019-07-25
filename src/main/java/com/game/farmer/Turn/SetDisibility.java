@@ -7,7 +7,6 @@ import java.util.Deque;
 
 public class SetDisibility {
 
-
     public static void setDisability(Button rabbitToSheepButton, Button sheepToRabbitButton, Button sheepToSmallDogButton,
                                              Button smallDogtoSheepButton, Button sheepToPigButton,
                                              Button pigToSheepButton, Button pigToCowButton,

@@ -6,8 +6,6 @@ public class BlueDig extends Dig {
 
     public Image assignNumberToPictures(int randomNumber) {
 
-
-
         if (randomNumber >= 1 && randomNumber <= 6) {
             Image rabbit = new Image("/pictures/rabbit.png");
             return rabbit;
@@ -25,8 +23,7 @@ public class BlueDig extends Dig {
             return wolf;
         }
 
-       // wyjątek illegalstateexpetion
-        return null;
+       return null;
     }
 
 }

@@ -22,13 +22,4 @@ public class Horse {
 
         return new Pair(horsesOfUser,horsesOfFarm);
     }
-
-    public int setNumberHorsesOfFarm(int horsesOfFarm) {
-//pamietaj zmienic na 6
-        horsesOfFarm=0;
-        for (int i = 0; i < 6; i++) {
-            horsesOfFarm++;
-        }
-        return horsesOfFarm;
-    }
 }

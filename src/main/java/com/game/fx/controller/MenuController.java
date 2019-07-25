@@ -9,20 +9,7 @@ import javafx.scene.layout.Pane;
 import java.io.IOException;
 
 public class MenuController {
-
-
-    @FXML
-    private Button exitButton;
-
-    @FXML
-    private Button instructionButton;
-
-    @FXML
-    private Button startButton;
-
-    @FXML
-    private Pane menuFarmerPane;
-
+    
     private MainScreen mainScreen;
 
     @FXML
@@ -51,11 +38,6 @@ public class MenuController {
         InstructionController instructionController = loader.getController();
         instructionController.setMainScreen(mainScreen);
         mainScreen.setScreen(pane);
-
-    }
-
-    @FXML
-    void openCreator() {
 
     }
 

@@ -9,12 +9,6 @@ public class InstructionController {
     private MainScreen mainScreen;
 
     @FXML
-    private Button menuButton;
-
-    @FXML
-    private Pane instructionPane;
-
-    @FXML
     void backMenuFromInstruction() {
         mainScreen.loadMenuScreen();
     }
